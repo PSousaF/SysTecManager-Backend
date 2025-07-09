@@ -26,6 +26,7 @@ public class Supplier {
 	private int num_loja;
 	private int num_cli;
 	private String endereco;
+	private String estado;
 	private String telefone;
 	private String email;
 	private String pecas;

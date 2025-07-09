@@ -22,11 +22,11 @@ import javax.xml.bind.DatatypeConverter;
 @Service
 public class JwtService {
 
-    @Value("${security.jwt.expiration}")
-    private String expiracao;
+    //@Value("${security.jwt.expiration}")
+    private String expiracao = "90";
 
-    @Value("${security.jwt.signature-key}")
-    private String chaveAssinatura;
+    //@Value("${security.jwt.signature-key}")
+    private String chaveAssinatura = "c25vQwIUvzN3ozeWhCSmlxhdVF1";
 
     public String gerarToken( Users usuario ){
         long expString = Long.valueOf(expiracao);

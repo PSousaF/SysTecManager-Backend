@@ -44,8 +44,8 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/api/client")
 public class ClientsAndSuppliers {
 	
-    @Value("${save.file.img}")
-    private String dirSave;
+    //@Value("${save.file.img}")
+    private String dirSave = "C:/WebService/img/";
 
     @Autowired
     MovimentsRepository movimentsRepository;
@@ -188,7 +188,9 @@ public class ClientsAndSuppliers {
 			String str = "Pendente";
 			String app =  "Não";
 	        if(budgetInfo.containsKey("aparroved")) {
+	        	System.out.println(app + " - " + budgetInfo.containsKey("aparroved"));
 	        	app = Boolean.valueOf(budgetInfo.get("aparroved").toString()) == true ? "Sim": "Não";
+	        	System.out.println(app + " - " + budgetInfo.containsKey("aparroved"));
 	        }
 			List<Bid> dataBidList = new ArrayList<>(); 
 	        if(dataInfoImg.size() > 0) {

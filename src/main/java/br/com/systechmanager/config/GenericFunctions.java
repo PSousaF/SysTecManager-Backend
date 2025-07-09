@@ -48,13 +48,12 @@ import org.apache.log4j.SimpleLayout;
 public class GenericFunctions {
 
 
-	@Value("${log.file.save}")
-	private static String logFile;
+	//@Value("${log.file.save}")
+	private static String logFile = "C:/WebService/log/";
 	
 
-	  @Value("${email.pass.access}")
-	  private String psw;
-	  //final String psw="1019flapE";
+	  //@Value("${email.pass.access}")
+	  private String psw = "teste";
 	  
 	  
 	public HashMap<String, Object> getStatusObject(Object data, Boolean status) {

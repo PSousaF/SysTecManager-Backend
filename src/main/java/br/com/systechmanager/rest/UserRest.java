@@ -145,12 +145,15 @@ public class UserRest {
 
 	@PutMapping("disable/{id}")
 	@ApiOperation("Desativar usuário")
-	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void inative( @PathVariable Integer id){
 		HashMap<String, Object> returnItens = new HashMap<>();
+
+		System.out.println("vaichamar");
 		userRepository
 		.findById(id)
 		.map( userExist -> {
+			System.out.println("Achou");
+			System.out.println(userExist.getUsername());
             userExist.setAtivo(0);
             userRepository.save(userExist);
 			returnItens.put("success", true);
